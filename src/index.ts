@@ -1,4 +1,4 @@
-import IoT from "@dkaframework/iot";
+import IoT from "@dkaarmbian/iot";
 
 (() => {
     const STB = new IoT.s905x.HG680P();

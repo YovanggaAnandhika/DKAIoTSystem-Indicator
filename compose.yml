@@ -5,10 +5,14 @@ services:
     image: node:alpine
     container_name: led-indicator
     working_dir: /app/led
+    privileged: true
     volumes:
       - type: bind
         source: .
         target: /app/led
+      - type: bind
+        source: /sys/class/gpio
+        target: /sys/class/gpio
     deploy:
       resources:
         limits:

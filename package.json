@@ -1,0 +1,19 @@
+{
+  "name": "@dkaiot/indicator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build" : "tsc --build",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@dkaframework/iot": "^1.2.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.3",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

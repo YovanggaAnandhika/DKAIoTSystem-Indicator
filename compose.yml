@@ -1,0 +1,21 @@
+name: dka-iot-system
+
+services:
+  led-indicator:
+    image: node:alpine
+    container_name: led-indicator
+    working_dir: /app/led
+    volumes:
+      - type: bind
+        source: .
+        target: /app/led
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 200M
+        reservations:
+          cpus: '0.25'
+          memory: 100M
+    restart: always
+    command: sh -c 'yarn install && yarn run build && yarn run start'
